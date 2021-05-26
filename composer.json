@@ -1,0 +1,22 @@
+{
+  "name": "mrwang/esign-sdk",
+  "description": "根据e签宝官方文档开发的一个 PHP 扩展包, 电子签名SDK版.",
+  "authors": [
+    {
+      "name": "wyh",
+      "email": "1579775085@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.3",
+    "guzzlehttp/guzzle": "^7.3",
+    "pimple/pimple": "^3.0",
+    "ext-mbstring": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "WYH\\EsignSdk\\": "src"
+    }
+  }
+}
