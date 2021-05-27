@@ -39,7 +39,7 @@ abstract class AbstractApi
 
         $this->checkAndThrow($contents);
 
-        return (new Collection($contents))->get('data');
+        return $contents;
     }
 
     protected function checkAndThrow(array $contents)
