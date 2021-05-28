@@ -33,13 +33,13 @@ class Account extends AbstractApi
      *
      * @param $name
      * @param $organCode
-     * @param $regType
+     * @param  string  $regType
      * @param $arr array
      * @return mixed|null
      * @throws \Exception
      * @link https://open.esign.cn/doc/detail?id=opendoc%2Fpaas_sdk%2Frd5o81&namespace=opendoc%2Fpaas_sdk
      */
-    public function createOrganizeAccount($name, $organCode, $regType, $arr = [])
+    public function createOrganizeAccount($name, $organCode, string $regType = 'NORMAL', array $arr = [])
     {
         $url = '/tech-sdkwrapper/timevale/account/addOrganize';
 
