@@ -49,6 +49,6 @@ class Account extends AbstractApi
             'regType'   => $regType
         ] + $arr;
 
-        return $this->parseJSON('post', [$url, $params]);
+        return $this->parseJSON('json', [$url, $params]);
     }
 }
