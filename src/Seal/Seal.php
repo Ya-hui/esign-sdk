@@ -36,11 +36,11 @@ class Seal extends AbstractApi
      * @param $accountId
      * @param $color
      * @param $templateType
-     * @param $arr
+     * @param  array  $arr
      * @return mixed|null
      * @throws \Exception
      */
-    public function addOrganizeSeal($accountId, $color, $templateType, $arr)
+    public function addOrganizeSeal($accountId, $color, $templateType, array $arr = [])
     {
         $url = '/tech-sdkwrapper/timevale/seal/addOrganizeSeal';
 
