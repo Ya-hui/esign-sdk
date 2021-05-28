@@ -45,10 +45,33 @@ class Seal extends AbstractApi
         $url = '/tech-sdkwrapper/timevale/seal/addOrganizeSeal';
 
         $params = $arr + [
-            'accountId'    => $accountId,
-            'color'        => $color,
-            'templateType' => $templateType
-        ];
+                'accountId'    => $accountId,
+                'color'        => $color,
+                'templateType' => $templateType
+            ];
+
+        return $this->parseJSON('json', [$url, $params]);
+    }
+
+    /**
+     * 根据印章内容创建企业模板印章
+     *
+     * @param $roundText
+     * @param $templateType
+     * @param $color
+     * @param  array  $arr
+     * @return false|mixed|null
+     * @throws \Exception
+     */
+    public function addOrganizeWithContent($roundText, $templateType, $color, array $arr = [])
+    {
+        $url = '/timevale/seal/addOrganizeWithContent';
+
+        $params = $arr + [
+                'roundText'    => $roundText,
+                'color'        => $color,
+                'templateType' => $templateType
+            ];
 
         return $this->parseJSON('json', [$url, $params]);
     }
