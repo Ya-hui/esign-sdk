@@ -65,7 +65,7 @@ class Seal extends AbstractApi
      */
     public function addOrganizeWithContent($roundText, $templateType, $color, array $arr = [])
     {
-        $url = '/timevale/seal/addOrganizeWithContent';
+        $url = '/tech-sdkwrapper/timevale/seal/addOrganizeWithContent';
 
         $params = $arr + [
                 'roundText'    => $roundText,
