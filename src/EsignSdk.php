@@ -12,11 +12,12 @@ use WYH\EsignSdk\ServiceProviders\Config;
 use WYH\EsignSdk\ServiceProviders\MobileProvider;
 use WYH\EsignSdk\ServiceProviders\SealProvider;
 use WYH\EsignSdk\ServiceProviders\SignFlowProvider;
+use WYH\EsignSdk\SignFlow\SignFlow;
 
 /**
  * Class EsignSdk
  *
- * @property SignFlowProvider $signFlow
+ * @property SignFlow $signFlow
  * @property Account $account
  * @property Mobile $mobile
  * @property Seal $seal
