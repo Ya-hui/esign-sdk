@@ -11,12 +11,12 @@ use WYH\EsignSdk\ServiceProviders\AccountProvider;
 use WYH\EsignSdk\ServiceProviders\Config;
 use WYH\EsignSdk\ServiceProviders\MobileProvider;
 use WYH\EsignSdk\ServiceProviders\SealProvider;
-use WYH\EsignSdk\SignFlow\SignFlow;
+use WYH\EsignSdk\ServiceProviders\SignFlowProvider;
 
 /**
  * Class EsignSdk
  *
- * @property SignFlow $signFlow
+ * @property SignFlowProvider $signFlow
  * @property Account $account
  * @property Mobile $mobile
  * @property Seal $seal
@@ -28,7 +28,7 @@ class EsignSdk extends Container
         AccountProvider::class,
         MobileProvider::class,
         SealProvider::class,
-        SignFlow::class
+        SignFlowProvider::class
     ];
 
     public function __construct(array $config = array())
