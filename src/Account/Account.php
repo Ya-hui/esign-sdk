@@ -72,4 +72,25 @@ class Account extends AbstractApi
 
         return $this->parseJSON('json', [$url, $params]);
     }
+
+    /**
+     * 注销账户
+     *
+     * 注销账户，注销后账户将不可再使用，请谨慎调用。
+     *
+     * @param $accountId
+     * @return false|mixed|null
+     * @throws \Exception
+     * @link https://open.esign.cn/doc/detail?id=opendoc%2Fpaas_sdk%2Fvtv9yp&namespace=opendoc%2Fpaas_sdk
+     */
+    public function delete($accountId)
+    {
+        $url = '/tech-sdkwrapper/timevale/account/delete';
+
+        $params = [
+            'accountId' => $accountId,
+        ];
+
+        return $this->parseJSON('json', [$url, $params]);
+    }
 }
